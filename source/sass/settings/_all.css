@@ -1,0 +1,73 @@
+/* Table of contents */
+
+/*
+ *  1. Global
+ *  2. Colors
+ *  3. Typography
+ *  4. Space
+ *  5. Border
+ *
+ */
+
+/* 1. Global */
+$base: 8px;
+$type-scale: 1.25;
+$line-height-base: 1.4;
+
+/* 2. Colors */
+$color-1: #60ba62;
+$color-2: #4ea950;
+$color-3: #edf1fd;
+$color-4: #f5f5f5;
+$color-5: #848484;
+$color-6: #575757;
+$color-7: #f7ca18;
+$color-8: #fff;
+
+$chambray: #3a539b;
+$parsley: #134d13;
+$grenadier: #d43900;
+$bright-red: #b50000;
+$bossanova: #532f61;
+
+$color-primary: $color-1;
+$color-white: $color-8;
+
+$color-info: $chambray;
+$color-success: $parsley;
+$color-warning: $grenadier;
+$color-danger: $bright-red;
+
+$body-bg: $color-8;
+$body-color: $color-5;
+$heading-color: $color-6;
+$link-color: $color-primary;
+
+/* 3. Typography */
+$font-sans-serif: "Montserrat", sans-serif;
+
+$font-family-body: $font-sans-serif;
+$font-family-heading: $font-sans-serif;
+
+/* type scale: 1.25 - http://type-scale.com/ */
+$font-size-base: 14px;
+$font-size-h1: 2.441rem;
+$font-size-h2: 1.953rem;
+$font-size-h3: 1.563rem;
+$font-size-h4: 1.25rem;
+$font-size-h5: 1rem;
+$font-size-h6: 0.8rem;
+
+$font-weight-base: 300;
+$font-weight-normal: 400;
+
+/* 4. Space */
+$space-tiny: $base;
+$space-small: ($base * 2);
+$space-base: ($base * 3);
+$space-large: ($base * 6);
+$space-x-large: ($base * 8);
+
+/* 5. Border */
+$radius: 4px;
+$border-width: 1px;

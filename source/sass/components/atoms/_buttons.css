@@ -1,0 +1,31 @@
+.md-btn {
+  display: inline-block;
+  padding: $space-tiny $space-base;
+
+  font-family: $font-family-body;
+  font-weight: $font-weight-base;
+  color: $color-white;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+
+  background-color: $color-primary;
+  border: 0;
+  border-radius: $radius;
+
+  &:hover {
+    color: $color-white;
+
+    cursor: pointer;
+    background-color: darken($color-primary, 5%);
+  }
+
+  &--special {
+    color: $color-primary;
+
+    background-color: $color-white;
+
+    @include border;
+  }
+}
