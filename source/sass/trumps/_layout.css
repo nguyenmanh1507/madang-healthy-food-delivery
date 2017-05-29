@@ -1,0 +1,7 @@
+.md-l-flex {
+  display: flex;
+
+  &__fullfill {
+    flex-grow: 1;
+  }
+}

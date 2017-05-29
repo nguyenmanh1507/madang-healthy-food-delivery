@@ -1,0 +1,65 @@
+.md-card-4 {
+  text-align: center;
+
+  border-radius: $radius;
+
+  @include box-shadow;
+
+  &__content {
+    padding: $space-base $space-tiny;
+
+    background-color: $color-primary;
+    border-radius: $radius $radius 0 0;
+  }
+
+  &__thumbnail {
+    size: ($base * 12);
+    margin: 0 auto $space-base;
+    overflow: hidden;
+
+    @include border(2px, $color-white);
+    border-radius: 50%;
+  }
+
+  &__title {
+    margin: 0 0 $space-tiny;
+
+    font-size: $font-size-h4;
+    color: $color-white;
+  }
+
+  &__text {
+    color: $color-white;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: center;
+    padding: $space-small $space-tiny;
+
+    background-color: $color-white;
+    border-radius: 0 0 $radius $radius;
+  }
+
+  &__addon {
+    display: inline-block;
+    size: $space-base;
+
+    line-height: $space-base;
+    color: $color-white;
+    text-align: center;
+
+    background-color: $color-primary;
+    border-radius: 50%;
+
+    &:hover {
+      color: $color-white;
+
+      background-color: darken($color-primary, 5%);
+    }
+
+    &:not(:last-of-type) {
+      margin-right: $space-small;
+    }
+  }
+}

@@ -6,7 +6,7 @@
  *  3. Typography
  *  4. Space
  *  5. Border
- *
+ *  6. Media Query
  */
 
 /* 1. Global */
@@ -23,6 +23,7 @@ $color-5: #848484;
 $color-6: #575757;
 $color-7: #f7ca18;
 $color-8: #fff;
+$color-9: #d3d3d3;
 
 $chambray: #3a539b;
 $parsley: #134d13;
@@ -32,6 +33,8 @@ $bossanova: #532f61;
 
 $color-primary: $color-1;
 $color-white: $color-8;
+$color-whitesmoke: $color-4;
+$color-yellow: $color-7;
 
 $color-info: $chambray;
 $color-success: $parsley;
@@ -42,6 +45,7 @@ $body-bg: $color-8;
 $body-color: $color-5;
 $heading-color: $color-6;
 $link-color: $color-primary;
+$border-color: $color-9;
 
 /* 3. Typography */
 $font-sans-serif: "Montserrat", sans-serif;
@@ -71,3 +75,8 @@ $space-x-large: ($base * 8);
 /* 5. Border */
 $radius: 4px;
 $border-width: 1px;
+
+/* 6. Media Query */
+@custom-media --small-only (max-width: 639px);
+@custom-media --medium-up (min-width: 640px);
+@custom-media --large-up (min-width: 1024px);

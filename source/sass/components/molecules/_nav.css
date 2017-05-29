@@ -1,0 +1,14 @@
+.md-nav {
+  &__link {
+    color: $heading-color;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $link-color;
+    }
+
+    &:not(:last-child) {
+      margin-right: $space-base;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.md-card-1 {
+  display: inline-block;
+  overflow: hidden;
+
+  border-radius: $radius;
+
+  @include box-shadow;
+
+  &__thumbnail {
+    background-color: $border-color;
+    border-radius: $radius $radius 0 0;
+
+    @include keep-ratio-1-1;
+  }
+
+  &__image {
+    border-radius: $radius $radius 0 0;
+  }
+
+  &__content {
+    padding: $space-small $space-tiny;
+
+    background-color: $color-white;
+  }
+}

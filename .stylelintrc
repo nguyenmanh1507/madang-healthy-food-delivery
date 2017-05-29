@@ -11,6 +11,7 @@
     "rule-nested-empty-line-before": null,
     "rule-non-nested-empty-line-before": null,
     "no-unsupported-browser-features": null,
+    "primer/selector-no-utility": null,
     "csstree/validator": true,
     "plugin/no-unsupported-browser-features": [true, {
       "browsers": [

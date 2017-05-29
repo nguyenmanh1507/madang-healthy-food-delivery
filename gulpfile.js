@@ -15,6 +15,36 @@ var dev = true;
 
 // Custom tasks
 gulp.task('styles', () => {
+  const
+    assets      = require('postcss-assets'),
+    pxtorem     = require('postcss-pxtorem'),
+    at2x        = require('postcss-at2x'),
+    customMedia = require('postcss-custom-media'),
+    shortSize   = require('postcss-short-size'),
+    rucksack    = require('rucksack-css'),
+    animation   = require('postcss-animation'),
+    triangle    = require('postcss-triangle'),
+    processors  = [
+      pxtorem({
+        rootValue: 14,
+        replace: true,
+        propWhiteList: [],
+        selectorBlackList: [/^html$/],
+      }),
+      assets({
+        loadPaths: ['images/'],
+        basePath: 'source',
+        relative: true,
+        cachebuster: true
+      }),
+      shortSize,
+      rucksack(),
+      triangle(),
+      customMedia,
+      at2x,
+      animation(),
+    ];
+
   return gulp.src('source/sass/*.css')
     .pipe($.plumber())
     .pipe($.if(dev, $.sourcemaps.init()))
@@ -23,6 +53,7 @@ gulp.task('styles', () => {
       precision: 10,
       includePaths: ['.']
     }).on('error', $.sass.logError))
+    .pipe($.postcss(processors))
     .pipe($.autoprefixer({browsers: ['> 1%', 'last 2 versions', 'Firefox ESR']}))
     .pipe($.if(dev, $.sourcemaps.write('.')))
     .pipe(gulp.dest('source/css'));

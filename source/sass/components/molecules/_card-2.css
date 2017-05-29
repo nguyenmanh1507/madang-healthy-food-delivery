@@ -1,0 +1,64 @@
+.md-card-2 {
+  border-radius: $radius;
+
+  @include border($border-width, $color-primary);
+
+  &__content {
+    padding: $space-base $space-small;
+
+    background-color: $color-white;
+    border-radius: $radius $radius 0 0;
+  }
+
+  &__title {
+    margin-bottom: $space-small;
+
+    font-size: $font-size-h4;
+    font-weight: $font-weight-normal;
+    text-transform: uppercase;
+  }
+
+  &__headline {
+    font-size: ($base * 6);
+    font-weight: $font-weight-normal;
+    color: $color-primary;
+  }
+
+  &__sub-headline {
+    font-size: $font-size-h4;
+    color: $color-primary;
+  }
+
+  &__footer {
+    display: block;
+    padding: $space-small $space-small;
+
+    color: $color-white;
+    text-align: center;
+    text-transform: uppercase;
+
+    background-color: $color-primary;
+
+    &:hover {
+      color: $color-white;
+      background-color: darken($color-primary, 5%);
+    }
+  }
+
+  &--best-choice {
+    border-color: $color-yellow;
+
+    .md-card-2__footer {
+      background-color: $color-yellow;
+
+      &:hover {
+        background-color: darken($color-yellow, 5%);
+      }
+    }
+
+    .md-card-2__headline,
+    .md-card-2__sub-headline {
+      color: $color-yellow;
+    }
+  }
+}

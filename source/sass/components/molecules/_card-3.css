@@ -1,0 +1,34 @@
+.md-card-3 {
+  &__thumbnail {
+    background-color: $border-color;
+    border-radius: $radius;
+
+    @include keep-ratio-4-3;
+  }
+
+  &__image {
+    width: 100%;
+
+    border-radius: $radius;
+  }
+
+  &__content {
+    position: relative;
+
+    padding: $space-base $space-small;
+    margin-right: $space-small;
+    margin-left: $space-small;
+
+    background-color: $color-white;
+    border-radius: $radius;
+
+    transform: translateY(-$space-base);
+  }
+
+  &__title {
+    display: block;
+    margin: 0 0 $space-tiny;
+
+    font-size: $font-size-h3;
+  }
+}
