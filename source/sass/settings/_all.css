@@ -80,3 +80,7 @@ $border-width: 1px;
 @custom-media --small-only (max-width: 639px);
 @custom-media --medium-up (min-width: 640px);
 @custom-media --large-up (min-width: 1024px);
+
+/* 7. Animation */
+$tr-time: 0.25s;
+$tr-effect: ease-in;

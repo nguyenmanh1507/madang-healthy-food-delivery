@@ -5,11 +5,43 @@
 
   @include box-shadow;
 
+  @media (--large-up) {
+    box-shadow: none;
+
+    &:hover {
+      @include box-shadow;
+
+      .md-card-4__content {
+        background-color: $color-primary;
+      }
+
+      .md-card-4__thumbnail {
+        border-color: $color-white;
+      }
+
+      .md-card-4__title,
+      .md-card-4__text {
+        color: $color-white;
+      }
+
+      .md-card-4__footer {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
   &__content {
     padding: $space-base $space-tiny;
 
     background-color: $color-primary;
     border-radius: $radius $radius 0 0;
+
+    @include transition(background-color);
+
+    @media (--large-up) {
+      background-color: transparent;
+    }
   }
 
   &__thumbnail {
@@ -17,8 +49,14 @@
     margin: 0 auto $space-base;
     overflow: hidden;
 
-    @include border(2px, $color-white);
     border-radius: 50%;
+
+    @include border(2px, $color-white);
+    @include transition(border-color);
+
+    @media (--large-up) {
+      border-color: $color-primary;
+    }
   }
 
   &__title {
@@ -26,19 +64,34 @@
 
     font-size: $font-size-h4;
     color: $color-white;
+
+    @media (--large-up) {
+      color: $body-color;
+    }
   }
 
   &__text {
     color: $color-white;
+
+    @media (--large-up) {
+      color: $body-color;
+    }
   }
 
   &__footer {
     display: flex;
     justify-content: center;
-    padding: $space-small $space-tiny;
+    padding: $space-base $space-tiny;
 
     background-color: $color-white;
     border-radius: 0 0 $radius $radius;
+
+    @include transition(opacity);
+
+    @media (--large-up) {
+      visibility: hidden;
+      opacity: 0;
+    }
   }
 
   &__addon {

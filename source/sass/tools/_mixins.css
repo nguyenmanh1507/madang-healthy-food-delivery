@@ -3,7 +3,7 @@
 }
 
 @mixin box-shadow {
-  box-shadow: 0 0 $space-base $color-whitesmoke;
+  box-shadow: 0 0 $space-base rgba($body-color, 0.4);
 }
 
 @mixin keep-ratio-1-1 {
@@ -16,4 +16,8 @@
   width: 100%;
   height: 0;
   padding-bottom: 75%;
+}
+
+@mixin transition($property: all) {
+  transition: $property $tr-time $tr-effect;
 }

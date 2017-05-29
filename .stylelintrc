@@ -22,7 +22,8 @@
         "last 2 edge versions",
         "ie 11",
       ],
-      "severity": "warning"
+      "severity": "warning",
+      "ignore": ["outline", "flexbox"]
     }],
     "rule-empty-line-before": [
       "always-multi-line",
