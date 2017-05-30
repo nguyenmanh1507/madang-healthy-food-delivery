@@ -1,0 +1,5 @@
+.md-header {
+  padding: $space-tiny 0;
+
+  background-image: linear-gradient(to bottom, $color-white 86%, transparent);
+}

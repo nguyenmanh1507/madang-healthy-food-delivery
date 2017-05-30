@@ -4,4 +4,24 @@
   &__fullfill {
     flex-grow: 1;
   }
+
+  &--vertical-middle {
+    align-items: center;
+  }
+}
+
+/*
+ * This is pattern for situation:
+ * header position absolute on top hero section
+ * olive no related to meaning of pattern, just random name
+ */
+.md-l-olive {
+  position: relative;
+
+  .md-l-olive__item {
+    position: absolute;
+    top: 0;
+    z-index: map-get($z-index, "lv1");
+    width: 100%;
+  }
 }

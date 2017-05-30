@@ -1,0 +1,9 @@
+.md-branding {
+  &__text {
+    @include sr-only;
+  }
+
+  // &__image {
+  //   display: inline-block;
+  // }
+}

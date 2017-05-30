@@ -7,12 +7,21 @@
  *  4. Space
  *  5. Border
  *  6. Media Query
+ *  7. Animation
+ *  8. Misc
+ *
  */
 
 /* 1. Global */
 $base: 8px;
 $type-scale: 1.25;
 $line-height-base: 1.4;
+$z-index: (
+  lv1: 10,
+  lv2: 20,
+  lv3: 30,
+  lv4: 40,
+);
 
 /* 2. Colors */
 $color-1: #60ba62;
@@ -24,6 +33,7 @@ $color-6: #575757;
 $color-7: #f7ca18;
 $color-8: #fff;
 $color-9: #d3d3d3;
+$color-10: #000;
 
 $chambray: #3a539b;
 $parsley: #134d13;
@@ -35,6 +45,7 @@ $color-primary: $color-1;
 $color-white: $color-8;
 $color-whitesmoke: $color-4;
 $color-yellow: $color-7;
+$color-black: $color-10;
 
 $color-info: $chambray;
 $color-success: $parsley;
@@ -84,3 +95,6 @@ $border-width: 1px;
 /* 7. Animation */
 $tr-time: 0.25s;
 $tr-effect: ease-in;
+
+/* 8. Misc */
+$hero-max-width: 1540px;

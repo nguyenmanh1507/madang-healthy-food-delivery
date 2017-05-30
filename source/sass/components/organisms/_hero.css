@@ -1,0 +1,47 @@
+.md-hero {
+  position: relative;
+  max-width: $hero-max-width;
+  size: 100% 0;
+  padding-bottom: 56.25%; // 16:9
+  margin: 0 auto;
+
+  background: $border-color resolve("heros/hero.jpg") no-repeat center center;
+  background-size: cover;
+
+  &::before {
+    position: absolute 0;
+    content: "";
+    background-color: rgba($color-white, 0.5);
+  }
+
+  @media (--large-up) {
+    padding-bottom: 42.857142857%; // 21:9
+  }
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+
+    transform: translateY(-50%);
+  }
+
+  &__heading {
+    margin: 0;
+
+    font-size: responsive $font-size-h4 ($base * 8);
+    font-weight: $font-weight-base;
+    color: $color-black;
+  }
+
+  &__highlight {
+    color: $color-primary;
+  }
+
+  &__text {
+    max-width: ($base * 50);
+
+    font-size: responsive $font-size-h6 $font-size-base;
+    color: $color-black;
+  }
+}

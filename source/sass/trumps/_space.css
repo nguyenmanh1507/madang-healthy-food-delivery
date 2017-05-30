@@ -1,15 +1,68 @@
-.mtxs {
-  margin-top: $space-tiny;
+/* stylelint-disable */
+
+.md-m-reset {
+  margin: 0;
 }
 
-.mtmd {
-  margin-top: $space-base;
+// margin and padding values array
+$space-values : (
+  reset: 0,
+  tiny: $space-tiny,
+  small: $space-small,
+  base: $space-base,
+  large: $space-large,
+  x-large: $space-x-large,
+);
+
+// margin and padding shorthands
+$space-prefixes : (
+  p: padding,
+  pr: padding-right,
+  pl: padding-left,
+  pt: padding-top,
+  pb: padding-bottom,
+  mt : margin-top,
+  mr : margin-right,
+  mb : margin-bottom,
+  ml : margin-left,
+);
+
+// change these values if its not imported into bootstrap
+$grid-breakpoints: (
+  // Small screen / phone
+  small: 0,
+  // Medium screen / tablet
+  medium: 640px,
+  // Large screen / desktop
+  large: 1024px,
+);
+
+// main function definition
+@mixin make-space($values, $prefixes, $breakpoints) {
+  @each $breakpoint-name, $breakpoint-value in $breakpoints {
+    // if xs value = 0, set it global without media queries
+    @if($breakpoint-value == 0) {
+      @each $attr-short, $attr-long in $prefixes {
+        @each $alias, $value in $values {
+          .md-#{$attr-short}-#{$alias} {
+            #{$attr-long}: #{$value};
+          }
+        }
+      }
+    }
+    // breakpoint values that not equal to 0
+    @else {
+      @media screen and (min-width: $breakpoint-value) {
+        @each $attr-short, $attr-long in $prefixes {
+          @each $alias, $value in $values {
+            .md-#{$breakpoint-name}-#{$attr-short}-#{$alias} {
+              #{$attr-long}: #{$value};
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
-.mbsm {
-  margin-bottom: $space-small;
-}
-
-.mbmd {
-  margin-bottom: $space-base;
-}
+@include make-space($space-values, $space-prefixes, $grid-breakpoints);

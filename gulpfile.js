@@ -99,6 +99,7 @@ function normalizePath() {
 ******************************************************/
 // JS copy
 gulp.task('pl-copy:js', function () {
+  console.log('pl copy');
   return gulp.src('**/*.js', {cwd: normalizePath(paths().source.js)} )
     .pipe(gulp.dest(normalizePath(paths().public.js)));
 });
@@ -252,6 +253,10 @@ function reloadCSS(done) {
   done();
 }
 
+function reloadJS() {
+  browserSync.reload('*.js');
+}
+
 function watch() {
   const watchers = [
     {
@@ -265,6 +270,12 @@ function watch() {
       paths: [normalizePath(paths().source.sass, '**', '*.css')],
       config: { awaitWriteFinish: true },
       tasks: gulp.series('styles', 'stylelint')
+    },
+    {
+      name: 'JS',
+      paths: [normalizePath(paths().source.js, '**', '*.js')],
+      config: { awaitWriteFinish: true },
+      tasks: gulp.series('pl-copy:js')
     },
     {
       name: 'Styleguide Files',
