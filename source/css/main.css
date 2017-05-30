@@ -763,7 +763,6 @@ textarea.md-f__control {
 }
 
 .md-card-1 {
-  display: inline-block;
   overflow: hidden;
   border-radius: 0.28571rem;
   -webkit-box-shadow: 0 0 1.71429rem rgba(132, 132, 132, 0.4);
@@ -779,6 +778,7 @@ textarea.md-f__control {
 }
 
 .md-card-1__image {
+  width: 100%;
   border-radius: 0.28571rem 0.28571rem 0 0;
 }
 
