@@ -1,0 +1,17 @@
+.md-footer {
+  padding-top: $space-base;
+
+  background-color: $color-primary;
+
+  &__bottom {
+    padding: $space-base 0;
+    margin-top: $space-base;
+
+    background-color: $color-primary-darken;
+  }
+
+  &__bottom-text {
+    color: $color-white;
+    text-align: center;
+  }
+}

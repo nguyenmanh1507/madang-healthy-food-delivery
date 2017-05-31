@@ -1,0 +1,22 @@
+{
+  "1": {
+    "heading": "About",
+    "link-1-text": "About us",
+    "link-2-text": "Contact us"
+  },
+  "2": {
+    "heading": "Press",
+    "link-1-text": "Press release",
+    "link-2-text": "Media"
+  },
+  "3": {
+    "heading": "Company",
+    "link-1-text": "Team",
+    "link-2-text": "Board"
+  },
+  "4": {
+    "heading": "Term",
+    "link-1-text": "Privacy",
+    "link-2-text": "About cookies"
+  }
+}

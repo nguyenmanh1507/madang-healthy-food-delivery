@@ -124,7 +124,7 @@ gulp.task('pl-copy:font', function () {
 
 // CSS Copy
 gulp.task('pl-copy:css', function () {
-  return gulp.src(normalizePath(paths().source.css) + '/*.css')
+  return gulp.src([normalizePath(paths().source.css) + '/*.css', normalizePath(paths().source.css) + '/*.css.map'])
     .pipe(gulp.dest(normalizePath(paths().public.css)))
     .pipe(browserSync.stream());
 });
@@ -269,7 +269,7 @@ function watch() {
       name: 'SASS',
       paths: [normalizePath(paths().source.sass, '**', '*.css')],
       config: { awaitWriteFinish: true },
-      tasks: gulp.series('styles', 'stylelint')
+      tasks: gulp.parallel('styles', 'stylelint')
     },
     {
       name: 'JS',

@@ -1,3 +1,7 @@
 .md-well {
   padding: $space-large 0;
+
+  &--smoke {
+    background-color: $color-whitesmoke;
+  }
 }

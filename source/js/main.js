@@ -1,16 +1,46 @@
 (function ($) {
-  $('.owl-carousel').owlCarousel({
-    center: true,
-    loop: true,
-    margin: 16,
-    items: 2,
-    responsive: {
-      1024: {
-        items: 6
+  $('#featuredCarousel').slick({
+    centerMode: true,
+    slidesToShow: 7,
+    focusOnSelect: true,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 1640,
+        settings: {
+          slidesToShow: 6,
+        },
       },
-      640: {
-        items: 4,
-      }
-    }
+      {
+        breakpoint: 1390,
+        settings: {
+          slidesToShow: 5,
+        },
+      },
+      {
+        breakpoint: 1120,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 660,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   });
 })(jQuery)

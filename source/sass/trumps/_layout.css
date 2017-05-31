@@ -5,8 +5,25 @@
     flex-grow: 1;
   }
 
+  &__keep {
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+
   &--vertical-middle {
     align-items: center;
+  }
+
+  &--center {
+    justify-content: center;
+  }
+
+  &--wrap {
+    flex-wrap: wrap;
+  }
+
+  &--sp-between {
+    justify-content: space-between;
   }
 }
 

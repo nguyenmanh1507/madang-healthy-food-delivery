@@ -21,6 +21,15 @@
     background-color: darken($color-primary, 5%);
   }
 
+  &--block {
+    display: block;
+    width: 100%;
+  }
+
+  &--large {
+    padding: $space-small;
+  }
+
   &--special {
     color: $color-primary;
 

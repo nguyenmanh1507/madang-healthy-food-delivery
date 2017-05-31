@@ -32,7 +32,7 @@
   }
 
   &__content {
-    padding: $space-base $space-tiny;
+    padding: $space-base $space-large;
 
     background-color: $color-primary;
     border-radius: $radius $radius 0 0;

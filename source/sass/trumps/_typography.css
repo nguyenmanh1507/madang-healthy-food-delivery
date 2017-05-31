@@ -1,3 +1,7 @@
+.text-fz-h1 {
+  font-size: $font-size-h1;
+}
+
 .text-fz-large {
   font-size: $font-size-h4;
 }
@@ -8,4 +12,20 @@
 
 .text-uppercase {
   text-transform: uppercase;
+}
+
+.text-color-link {
+  color: $link-color;
+}
+
+.text-color-white {
+  color: $color-white;
+}
+
+.text-color-heading {
+  color: $heading-color;
+}
+
+.text-right {
+  text-align: right;
 }
