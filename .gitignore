@@ -6,3 +6,6 @@ patternlab.json
 Thumbs.db
 .idea/
 public
+source/css/main.css
+*.map
+package-lock.json

@@ -1,6 +1,7 @@
 .md-f {
   &__control {
     $input-height: ($base * 4);
+    $input-large-height: $space-large;
 
     display: block;
     width: 100%;
@@ -27,6 +28,29 @@
 
     &--w-auto {
       width: auto;
+    }
+
+    &--large {
+      height: $input-large-height;
+    }
+  }
+
+  &__group {
+    display: flex;
+    justify-content: center;
+
+    &-item {
+      border-radius: 0;
+    }
+
+    &-item:first-child {
+      border-top-left-radius: $radius;
+      border-bottom-left-radius: $radius;
+    }
+
+    &-item:last-child {
+      border-top-right-radius: $radius;
+      border-bottom-right-radius: $radius;
     }
   }
 }

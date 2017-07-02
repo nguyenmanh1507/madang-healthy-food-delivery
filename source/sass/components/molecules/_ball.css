@@ -1,0 +1,11 @@
+.md-ball {
+  display: inline-block;
+  size: $space-base;
+
+  line-height: $space-base;
+  color: $color-primary;
+  text-align: center;
+
+  background-color: $color-white;
+  border-radius: 50%;
+}
