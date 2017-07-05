@@ -1,0 +1,42 @@
+.md-car {
+  .slick-track {
+    padding: 0;
+  }
+
+  .slick-slide {
+    outline: none;
+  }
+
+  .slick-dots {
+    padding: 0;
+    margin: 0;
+
+    text-align: center;
+    list-style: none;
+
+    li { /* stylelint-disable-line */
+      display: inline-block;
+
+      &:not(:last-child) {
+        margin-right: $space-tiny;
+      }
+    }
+
+    button { /* stylelint-disable-line */
+      size: $space-small $space-tiny;
+
+      text-indent: -9999px;
+
+      background-color: rgba($color-primary, 0.4);
+      border: 0;
+      border-radius: $radius;
+    }
+
+    li.slick-active button { /* stylelint-disable-line */
+      width: $space-base;
+
+      background-color: $color-primary;
+      outline: none;
+    }
+  }
+}
