@@ -4,6 +4,7 @@
 
   font-family: $font-family-body;
   font-weight: $font-weight-base;
+  line-height: 1;
   color: $color-white;
   text-align: center;
   white-space: nowrap;
@@ -33,7 +34,8 @@
   &--special {
     color: $color-primary;
 
-    background-color: $color-white;
+    // background-color: $color-white;
+    background-color: transparent;
 
     @include border;
   }

@@ -1,0 +1,22 @@
+.md-card-5 {
+  position: relative;
+
+  &__image {
+    position: absolute;
+    left: 50%;
+
+    size: 80px;
+    overflow: hidden;
+
+    border-radius: 50%;
+
+    transform: translate(-50%, 40px);
+  }
+
+  &__body {
+    padding: $space-small;
+
+    background-color: $color-white;
+    border-radius: $radius;
+  }
+}

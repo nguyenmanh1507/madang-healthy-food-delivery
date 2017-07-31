@@ -6,6 +6,10 @@
   font-size: $font-size-h4;
 }
 
+.text-small {
+  font-size: $font-size-h6;
+}
+
 .text-center {
   text-align: center;
 }
@@ -28,4 +32,12 @@
 
 .text-right {
   text-align: right;
+}
+
+.text-bold {
+  font-weight: $font-weight-bold;
+}
+
+.text-normal {
+  font-weight: $font-weight-normal;
 }

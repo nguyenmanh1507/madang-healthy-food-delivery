@@ -1,0 +1,18 @@
+{
+  "1": {
+    "name": "Porridge",
+    "description": "With fresh fruit and canberries"
+  },
+  "2": {
+    "name": "Baked salmon",
+    "description": "With brokoli and vegetables"
+  },
+  "3": {
+    "name": "Vegetable salad",
+    "description": "With cheese feta"
+  },
+  "4": {
+    "name": "Tomato omelet",
+    "description": "With parsley and feta cheese"
+  }
+}
