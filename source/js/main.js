@@ -1,6 +1,6 @@
 /* global jQuery */
 
-(function ($) {
+;(function($) {
   $('#featuredCarousel').slick({
     centerMode: true,
     slidesToShow: 7,
@@ -58,4 +58,32 @@
     slidesToShow: 7,
     focusOnSelect: true
   })
+
+  class Tab {
+    constructor(el) {
+      this.tab = $(el)
+      this.link = this.tab.find('.md-tab__link')
+      this.pane = this.tab.find('.md-tab__pane')
+    }
+
+    init() {
+      const pane = this.pane
+      const link = this.link
+
+      link.on('click', function(e) {
+        link.removeClass('active')
+        $(this).addClass('active')
+        e.preventDefault()
+        $.each(pane, (index, p) => {
+          if ($(p).attr('id') === $(this).attr('href').slice(1)) {
+            $(p).addClass('active')
+          } else {
+            $(p).removeClass('active')
+          }
+        })
+      })
+    }
+  }
+
+  new Tab('#tab-1').init()
 })(jQuery)

@@ -1,0 +1,33 @@
+.md-tab {
+  &__items {
+    background-color: $color-whitesmoke;
+  }
+
+  &__link {
+    display: inline-block;
+
+    padding: $space-tiny $space-small;
+
+    font-size: $font-size-h2;
+    line-height: 1;
+    color: $border-color;
+    text-transform: uppercase;
+
+    border-bottom: 2px solid transparent;
+
+    &.active,
+    &:hover {
+      color: $color-primary;
+
+      border-bottom-color: $color-primary;
+    }
+  }
+
+  &__pane {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+}
